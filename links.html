@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Horse &amp; Carriage Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    background: #1a1610;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 64px;
+  }
+
+  .bg-texture {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(180,148,70,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(180,148,70,0.06) 0%, transparent 60%),
+      #1a1610;
+  }
+
+  .container {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 480px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  .hero-ring {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(180,148,70,0.5);
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: rgba(180,148,70,0.07);
+    flex-shrink: 0;
+  }
+  .hero-ring img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #e8d9b0;
+    text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .brand-tagline {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(180,148,70,0.7);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(180,148,70,0.5);
+    margin-bottom: 10px;
+    margin-top: 28px;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(255,255,255,0.03);
+    border: 0.5px solid rgba(180,148,70,0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e8d9b0;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, border-color 0.2s;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  .link-btn:hover {
+    background: rgba(180,148,70,0.1);
+    border-color: rgba(180,148,70,0.5);
+  }
+
+  .photo-icon {
+    width: 44px; height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 0.5px solid rgba(180,148,70,0.25);
+    background: rgba(180,148,70,0.08);
+  }
+  .photo-icon img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+  }
+
+  .icon {
+    width: 44px; height: 44px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-gold { background: rgba(180,148,70,0.15); }
+  .icon-fb   { background: rgba(59,89,152,0.25); }
+  .icon-ig   { background: rgba(193,53,132,0.2); }
+
+  .link-btn .label { flex: 1; }
+
+  .link-btn .sub {
+    font-size: 11px;
+    color: rgba(180,148,70,0.5);
+    margin-top: 2px;
+    display: block;
+  }
+
+  .link-btn .arrow {
+    color: rgba(180,148,70,0.4);
+    font-size: 16px;
+  }
+
+  .contact-row {
+    display: flex; gap: 8px; width: 100%; margin-bottom: 8px;
+  }
+
+  .contact-row .link-btn {
+    flex: 1; margin-bottom: 0;
+    justify-content: center; text-align: center;
+    flex-direction: column; gap: 4px; padding: 12px 10px;
+  }
+
+  .contact-row .link-btn .icon {
+    width: 28px; height: 28px;
+    border-radius: 6px; margin: 0 auto;
+  }
+
+  .contact-row .link-btn .label { font-size: 12px; }
+
+  .divider {
+    width: 100%; height: 0.5px;
+    background: rgba(180,148,70,0.12);
+    margin: 32px 0 0;
+  }
+
+  .footer {
+    margin-top: 28px;
+    font-size: 11px;
+    color: rgba(180,148,70,0.3);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="bg-texture"></div>
+<div class="container">
+
+  <div class="hero-ring">
+    <img
+      src="https://raw.githubusercontent.com/christina-whcc/whcc/main/Angel%20Wedding.jpg"
+      alt="White Horse &amp; Carriage Company — wedding carriage"
+    >
+  </div>
+
+  <div class="brand-name">White Horse &amp; Carriage Company</div>
+  <div class="brand-tagline">San Antonio · Austin · Houston</div>
+
+  <div class="section-label">Our services</div>
+
+  <a class="link-btn" href="https://whitehorseandcarriage.com" target="_blank">
+    <div class="photo-icon">
+      <img
+        src="https://raw.githubusercontent.com/christina-whcc/whcc/main/Cinderella2.jpg"
+        alt="White Horse &amp; Carriage Company"
+        style="object-position: center 25%;"
+      >
+    </div>
+    <div class="label">White Horse &amp; Carriage Company
+      <span class="sub">See all of our services &amp; offerings</span>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <a class="link-btn" href="https://texasbaraathorse.com" target="_blank">
+    <div class="photo-icon">
+      <img
+        src="https://raw.githubusercontent.com/christina-whcc/baraat/main/images/sc-1.jpg"
+        alt="Texas Baraat Horse"
+        style="object-position: center center;"
+      >
+    </div>
+    <div class="label">Texas Baraat Horse
+      <span class="sub">Indian &amp; Desi Wedding Processions</span>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <a class="link-btn" href="https://texasfuneralcarriage.com" target="_blank">
+    <div class="photo-icon">
+      <img
+        src="https://raw.githubusercontent.com/christina-whcc/texasfuneralcarriage/main/hearse.png"
+        alt="Texas Funeral Carriage"
+        style="object-position: center center;"
+      >
+    </div>
+    <div class="label">Texas Funeral Carriage
+      <span class="sub">Horse-Drawn Funeral &amp; Memorial Services</span>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <div class="section-label">Follow us</div>
+
+  <a class="link-btn" href="https://facebook.com/whitehorseandcarriage" target="_blank">
+    <div class="icon icon-fb">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M10.5 3H8.5C7.4 3 6.5 3.9 6.5 5v1.5H5v2h1.5V15h2.5V8.5H11l.5-2H9.5V5c0-.3.2-.5.5-.5h1V3z" fill="#6090e0"/>
+      </svg>
+    </div>
+    <div class="label">Facebook
+      <span class="sub">facebook.com/whitehorseandcarriage</span>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <a class="link-btn" href="https://instagram.com/whitehorseandcarriageco" target="_blank">
+    <div class="icon icon-ig">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <rect x="3" y="3" width="12" height="12" rx="3" stroke="#d45090" stroke-width="1.2" fill="none"/>
+        <circle cx="9" cy="9" r="3" stroke="#d45090" stroke-width="1.2" fill="none"/>
+        <circle cx="13" cy="5" r="0.8" fill="#d45090"/>
+      </svg>
+    </div>
+    <div class="label">Instagram
+      <span class="sub">@whitehorseandcarriageco</span>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <div class="section-label">Get in touch</div>
+
+  <div class="contact-row">
+    <a class="link-btn" href="tel:+12106464102">
+      <div class="icon icon-gold">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 2h3l1 3-1.5 1.5C6.5 8.5 7.5 9.5 9.5 10.5L11 9l3 1v3c0 1-4 3-9-3S2 3 3 2z" stroke="#b4944b" stroke-width="1.1" fill="none"/>
+        </svg>
+      </div>
+      <div class="label">Call Us</div>
+      <span class="sub">210-646-4102</span>
+    </a>
+    <a class="link-btn" href="mailto:info@whitehorseandcarriage.com">
+      <div class="icon icon-gold">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <rect x="2" y="4" width="12" height="8" rx="1.5" stroke="#b4944b" stroke-width="1.1" fill="none"/>
+          <path d="M2 5l6 4 6-4" stroke="#b4944b" stroke-width="1.1"/>
+        </svg>
+      </div>
+      <div class="label">Email Us</div>
+      <span class="sub">info@whitehorseandcarriage.com</span>
+    </a>
+  </div>
+
+  <div class="divider"></div>
+  <div class="footer">© White Horse &amp; Carriage Company · Texas</div>
+
+</div>
+</body>
+</html>
