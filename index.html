@@ -788,63 +788,47 @@
       <p>All Special Occasions</p>
     </div>
   </div>
-  <div class="contact-form reveal">
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label" for="fname">First Name</label>
-        <input class="form-control" type="text" id="fname" placeholder="Your first name" />
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="lname">Last Name</label>
-        <input class="form-control" type="text" id="lname" placeholder="Your last name" />
-      </div>
+ <div class="contact-form reveal">
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label" for="fname">Full Name</label>
+      <input class="form-control" type="text" id="fname" placeholder="Your full name" autocomplete="name" />
     </div>
     <div class="form-group">
       <label class="form-label" for="femail">Email Address</label>
-      <input class="form-control" type="email" id="femail" placeholder="your@email.com" />
+      <input class="form-control" type="email" id="femail" placeholder="your@email.com" autocomplete="email" />
     </div>
+  </div>
+  <div class="form-row">
     <div class="form-group">
       <label class="form-label" for="fphone">Phone Number</label>
-      <input class="form-control" type="tel" id="fphone" placeholder="(000) 000-0000" />
+      <input class="form-control" type="tel" id="fphone" placeholder="(000) 000-0000" autocomplete="tel" />
     </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label class="form-label" for="fservice">Service Type</label>
-        <select class="form-control" id="fservice">
-          <option value="" disabled selected>Select a service...</option>
-          <option>Wedding</option>
-          <option>Quincea&#241;era</option>
-          <option>Baraat / Vidaai</option>
-          <option>Funeral / Hearse</option>
-          <option>Photo Shoot</option>
-          <option>Parade / Public Event</option>
-          <option>Other Special Occasion</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="fcity">Event City</label>
-        <select class="form-control" id="fcity">
-          <option value="" disabled selected>Select a city...</option>
-          <option>San Antonio</option>
-          <option>Austin</option>
-          <option>Houston</option>
-          <option>Surrounding Area</option>
-        </select>
-      </div>
+    <div class="form-group">
+      <label class="form-label" for="fservice">Service Type</label>
+      <select class="form-control" id="fservice">
+        <option value="" disabled selected>Select a service...</option>
+        <option>Wedding</option>
+        <option>Quincea&#241;era</option>
+        <option>Baraat / Vidaai</option>
+        <option>Funeral / Hearse</option>
+        <option>Photo Shoot</option>
+        <option>Parade / Public Event</option>
+        <option>Other Special Occasion</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label" for="fvenue">Venue &amp; City</label>
+      <input class="form-control" type="text" id="fvenue" placeholder="Venue name and city" />
     </div>
     <div class="form-group">
       <label class="form-label" for="fdate">Event Date</label>
       <input class="form-control" type="date" id="fdate" />
     </div>
-    <div class="form-group">
-      <label class="form-label" for="fmessage">Tell Us About Your Event</label>
-      <textarea class="form-control" id="fmessage" placeholder="Share details about your event, vision, or any questions you have..."></textarea>
-    </div>
-    <div class="form-submit">
-      <button class="btn-primary" onclick="handleSubmit(event)">Send Inquiry &#8594;</button>
-    </div>
-    <p class="form-success" id="form-msg">&#10003; Thank you! We will be in touch within 24 hours.</p>
   </div>
+  <div class="
 </section>
 
 <!-- TESTIMONIALS -->
